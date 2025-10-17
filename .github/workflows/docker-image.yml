@@ -28,7 +28,7 @@ jobs:
           context: ./springbootbackend
           file: ./springbootbackend/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/dockeraws-backend:latest
+          tags: ${{ secrets.DOCKER_USER }}/ll-backend:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v6
@@ -36,7 +36,7 @@ jobs:
           context: ./reactfrontend
           file: ./reactfrontend/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/dockeraws-frontend:latest
+          tags: ${{ secrets.DOCKER_USER }}/lo-frontend:latest
 
       - name: Save EC2 private key
         run: |
